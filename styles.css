@@ -1,0 +1,439 @@
+/* Import font from Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Variable Declarations */
+
+:root {
+    --PrimaryTextColor: #232e35;
+    --SecondaryTextColor: #656d72;
+
+    --BorderColor: #f1f1f1;
+    --LineColor: #d9d9d9;
+
+    --PrimaryBackgroundColor: #fff;
+    --SecondaryBackgroundColor: #fbfbfb;
+    --ThirdBackgroundColor: #f5f3fe;
+
+    --PrimaryIconColor: #7e74f1;
+    --PrimaryIconColorHover: #5d51e8;
+
+    --SectionPadding: 6rem 0;
+
+    --ItemBorderRadius: 0.7rem;
+}
+
+/* Body Styles */
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Heading Styles */
+
+h1, h2, h3, h4, h5, h6, strong {
+    color: var(--PrimaryTextColor);
+}
+
+/* Paragraph Styles */
+
+p, span, label, input, textarea, list {
+    color: var(--SecondaryTextColor);
+    font-size: 1rem;
+    line-height: 1.9rem;
+}
+
+/* Anchor Styles */
+
+a {
+    text-decoration: none;
+}
+
+/* Main Container Styles */
+
+.main-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .main-container {
+        width: 90%;
+    }
+}
+
+/* Button Styles */
+
+.btn {
+    padding: 1rem 1.5rem;
+    background-color: white;
+    border: 1.5px solid var(--BorderColor);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+
+/* titles*/
+
+.section-title {
+    margin : 1rem 0 4rem;
+    font-size:2rem;
+}
+
+.pre-title {
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    color:var(--SecondaryTextColor);
+    position:relative;
+    padding-left:40px;
+    width:fit-content;
+    font-weight: 400;
+    font-size:.9rem;
+}
+
+.pre-title::before {
+    content:"";
+    width:30px;
+    height:1px;
+    background: var(--LineColor);
+    position: absolute;
+    display:block;
+    left:0;
+    top:50%;
+}
+
+/*layout*/
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap:3rem;
+}
+
+/* Navigation Styles */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.logo {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.logo a {
+    color: var(--PrimaryTextColor);
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    color: var(--PrimaryTextColor);
+}
+
+/* burger*/
+
+.burger div {
+    width:25px;
+    height:2px;
+    background-color : #000;
+    margin:7px;
+    transition :all .3s;
+    z-index:99;
+}
+
+.burger {
+    display: none; 
+    z-index:99;
+    position:fixed;
+    top:33px;
+    right:35px;
+}
+
+/*hero section */
+
+#hero {
+    height: 720px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.hero-name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin:.5rem 0 1rem;
+}
+
+.hero-name span {
+    color : var(--PrimaryIconColor);
+}
+
+.hero-right img {
+    width:100%;
+}
+
+.hero-right {
+    display: flex;
+    justify-content: center;
+}
+
+/* bagian about me*/
+
+.hero-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    margin-right: 20px;
+}
+
+.pre-title {
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    color: var(--SecondaryTextColor);
+    font-weight: 400;
+    font-size: .9rem;
+    margin-top: 0;
+}
+
+.hero-left h4 {
+    margin-bottom:5px;
+}
+
+.hero-right{
+    margin-left: 20px;
+}
+
+/* end about me*/
+
+
+/* Bagian skill */
+
+#skills {
+    background-color: var(--SecondaryBackgroundColor); 
+    
+    padding: var(--SectionPadding); 
+}
+
+.skills .pre-title {
+    text-align: center; 
+    margin-bottom: 20px;
+    margin: 0 auto; 
+}
+
+
+.skill-title {
+    text-align: center;
+    margin-bottom: 75px;
+}
+
+.skill-item {
+    padding: 3rem 2rem; 
+    text-align: center; 
+    background: var(--PrimaryBackgroundColor);
+    border-radius: 10px; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 20px;
+}
+
+.skill h4 {
+    margin : 1.5rem 0;
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.skill-icon {
+    background: var(--ThirdBackgroundColor);
+    width: fit-content;
+    margin:0 auto;
+    padding :1rem 1.3rem;
+    border-radius: 0.5rem;
+}
+
+.skill-icon svg {
+    fill:var(--PrimaryIconColor);
+}
+
+/* end bagian skill */
+
+
+/* biography */
+
+#skills {
+    padding :var(--SectionPadding);
+    background: var(--SecondaryBackgroundColor);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap:3rem;
+}
+
+.pre-title,
+.section-title {
+    margin-top: 10px; 
+}
+
+/*contact */
+
+#contact {
+    padding: var(--SectionPadding);
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 100px; 
+    justify-content: center; 
+}
+
+.contact-item {
+    display: flex;
+    gap: 1.5rem; 
+    margin-bottom: 0.2rem; 
+    align-items: center; 
+}
+
+.contact-item-icon {
+    margin-right: 10px; 
+    background: var(--ThirdBackgroundColor);
+    width: 53px;
+    height: 53px;
+    border-radius: px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+}
+
+
+.contact-form div {
+    margin-bottom: 1.4rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    font-family: "Roboto", sans-serif;
+    background: var(--SecondaryBackgroundColor);
+    border: 1px solid var(--BorderColor);
+    border-radius: 3px;
+    resize: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #9d9fa1;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border: 0.5px solid #7d7d7d;
+}
+
+.btn-submit {
+    width: 595px;
+    padding: 0.75rem 1.3rem;
+    background-color: var(--PrimaryIconColor);
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-submit:hover {
+    background: var(--PrimaryIconColor);
+}
+
+.contact-item-icon svg {
+    fill: var(--PrimaryIconColor);
+}
+
+.contact-item-detail h4 {
+    margin-bottom: 0.6rem; 
+}
+
+
+
+/* sosmed*/
+
+#sosmed {
+    background-color: var(--SecondaryBackgroundColor); 
+    
+    padding: var(--SectionPadding); 
+}
+
+.sosmed .pre-title {
+    text-align: center; 
+    margin-bottom: 20px;
+    margin: 0 auto; 
+}
+
+
+.sosmed-title {
+    text-align: center;
+    margin-bottom: 75px;
+}
+
+.sosmed-item {
+    padding: 3rem 2rem; 
+    text-align: center; 
+    background: var(--PrimaryBackgroundColor);
+    border-radius: 10px; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 20px;
+}
+
+
+.sosmed-icon {
+    background: var(--ThirdBackgroundColor);
+    width: fit-content;
+    margin:0 auto;
+    padding :1rem 1.3rem;
+    border-radius: 0.5rem;
+}
+
+.sodmed-icon svg {
+    fill:var(--PrimaryIconColor);
+}
+
+.sosmed-item:nth-child(1) .sosmed-icon svg {
+    fill: green; 
+}
+
+.sosmed-item:nth-child(2) .sosmed-icon svg {
+    fill: blue; 
+}
+.sosmed-item:nth-child(3) .sosmed-icon svg {
+    fill: red;
+}
+
+/* end bagian sosmed */
+

@@ -1,0 +1,35 @@
+@media screen and (max-width : 1200px) {
+    p { 
+        font-size: 0.9rem ;
+        line-height: 1.8rem;
+    }
+
+    .grid-3 {
+        gap : 1 rem;
+    }
+
+}
+
+@media screen and (max-width : 1000px) {
+    /* burger*/ 
+    .burger {
+        display : block;
+        cursor: pointer;
+    }
+    nav {
+        position : fixed;
+        width : 50%;
+        right : 0;
+        top : 0;
+        height: 100vh;
+        flex-direction: column;
+        background: var(--PrimaryBackgroundColor);
+        border-left: 1 px solid var(--bordercolor);
+        z-index: 9;
+    }
+
+}
+
+@media screen and (max-width : 640px) {
+
+}
